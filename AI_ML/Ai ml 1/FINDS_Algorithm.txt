@@ -1,0 +1,9 @@
+Find-s Algorithm :
+
+1. Load Data set
+2. Initialize h to the most specific hypothesis in H
+3. For each positive training instance x
+          • For each attribute constraint ai in h
+                  If the constraint ai in h is satisfied by x then do nothing
+                  else replace ai in h by the next more general constraint that is satisfied by x
+4. Output hypothesis h
