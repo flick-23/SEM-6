@@ -7,8 +7,6 @@ from sklearn.metrics import mean_squared_error
 
 # Load the dataset and print it
 boston = load_boston()
-print(boston)
-
 # Create dataframes out of the dataset
 # data --> independent variables / x values
 # target --> dependent variable / y value
@@ -30,17 +28,17 @@ x_train, x_test, y_train, y_test = train_test_split(
 reg.fit(x_train, y_train)
 
 # Print the coefficients for each feature
-print(reg.coef_)
+print("\nCOEFFICIENTS", reg.coef_)
 
 # Run the model on the test data and print the predictions
 y_pred = reg.predict(x_test)
-print(y_pred)
+print("\nPREDICTIONS : ", y_pred)
 
 # Print the actual / target values
-print(y_test)
+print("\nACTUAL DATA : ", y_test)
 
 # Calculate the error
 # using np.mean
-print(np.mean(y_test - y_pred)**2)
+print("\nNP MEAN : ", np.mean(y_test - y_pred)**2)
 # using mean_squared_errro from sklearn.metrics
-print(mean_squared_error(y_test, y_pred))
+print("\nMEAN SQUARED ERROR :", mean_squared_error(y_test, y_pred))

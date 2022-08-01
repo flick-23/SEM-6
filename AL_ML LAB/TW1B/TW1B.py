@@ -1,5 +1,4 @@
 import csv
-from lib2to3.pytree import HUGE
 rows = []
 with open("Finds.csv") as csvfile:
     next(csvfile)
