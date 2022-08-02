@@ -14,7 +14,6 @@ x_count = vector.fit_transform(x)
 
 sd = MultinomialNB()
 sd.fit(x_count, y)
-
 t = [input("Enter a text message : ")]
 t = np.array(t)
 t = vector.transform(t)
